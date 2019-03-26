@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>HK Shop</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="/Content/Style.css">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container" style="font-family:Tahoma;">
+        <div class="header">
+            <div class="header_top">
+                <!-- Phần trên của header-->
+                <div class="header_top_left">
+                    <!-- Logo -->
+                    <a href="@Url.Action("Index","HKShop")" id="btn_logo" style="margin-left: 1px; margin-top: 35px;"><img src="/images/logo.png" width="150px" height="80px" sizes="50" /> Shop </span></a> <br />
+
+                </div>
+                <div class="header_top_right">
+                    <ul>
+                        <li><a href="#" id="1"><img src="/images/1.png" /> Tra cứu đơn hàng</a></li>
+                        <li><a href="#" id="2"><img src="/images/2.png" /> Câu hỏi thường gặp</a></li>
+                        <li><a href="#" id="3"><img src="/images/3.png" /> Tin tức</a></li>
+                        <li><a href="#" id="4"><img src="/images/4.png" /> Khuyến mãi</a></li>
+                        <li><a href="#" id="5"><img src="/images/5.png" /> Liên hệ</a></li>
+                    </ul>
+                    <p style="font-size: 15px; text-align:right; padding-top:30px; color:darkorange; background-color:darkslategrey;">Giờ làm việc (8:00 - 22:00)</p>
+                    <p style="font-size: 15px; text-align:right; margin-top: 5px; color: darkorange"><img src="/images/6.png" /> 0909 112 113</p>
+                </div>
+            </div> <!-- Hết header_top-->
+            <div class="header_bottom">
+                <!-- Phần dưới của header-->
+                <div class="menu">
+                    <!-- Menu -->
+                    <ul>
+                        <li>
+                            <a href="#"><img src="/images/7.png" /> DANH MỤC</a>
+                           
+                            <ul class="submenu">
+                                @Html.Action("DanhMuc", "HKShop")
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div> <!-- hết menu-->
+                <div class="right">
+                    <input type="text" id="search" placeholder="Tìm kiếm" style="height: 40px; width: 400px; margin-top: 7px; margin-left: 15px; padding-left: 15px; float:left" />
+                    <select style="height: 46px; width: 80px; margin-top: 7px; margin-left: -7px; border-left: 2px solid; float:left">
+                        <option value="Sach">Sách</option>
+                        <option value="bút">Bút bi</option>
+                        <option value="gom">Gom</option>
+                        <option value="thuoc">Thước</option>
+                    </select>
+                    <button style="height: 46px; width: 60px; margin-top: 7px; background-color:darkorange; cursor:pointer; border-radius:5px; float: left"><img src="/images/8.png" /></button>
+                    @Html.Action("GioHangPartial", "GioHang")
+                    <a href="@Url.Action("DangNhap","NguoiDung")" id="btn_Dangnhap" style="width: 90px; margin-right:15px ; margin-top: 7px; float: right ;  font-size: 15px; text-decoration:none; font-weight:bold; cursor: pointer;">Đăng nhập</a>
+                    <p style="float: right; font-size: 15px; margin-top: 5px; margin-right: 20px; margin-left: -22px">|</p>
+                    <a href="@Url.Action("DangKy","NguoiDung")" id="btn_Dangnhap" style="width: 90px; margin-right:15px ; margin-top: 7px; float: right ;  font-size: 15px; text-decoration:none; font-weight:bold; cursor:pointer">Đăng Ký</a>
+                    <a href="#" id="btn_kiemtra" style="width: 180px; margin-right:-192px ; margin-top: 38px; float: right; font-size: 15px; text-decoration: none; cursor:pointer;"><img src="/images/10.png" style="float:left; margin-right: 5px" />Kiểm tra đơn hàng</a>
+                </div>
+            </div> <!-- Hết header_bottom-->
+        </div> <!-- Hết header -->
+        
+        <div style="width:1400px; height:90px; background-color:darkslategrey;"></div>
+        <div class="content">
+            <div>@RenderBody()</div>
+        </div> 
+
+        <div class="footer">
+            <div class="left">
+                <a href="#" id="btn_logo" style="margin-left: 15px; margin-top: 15px; margin-bottom: 20px"><img src="/images/logo.png" width="150px" height="65px" sizes="50" /> Shop</a> <br />
+                <span><img src="/images/5.png" /> Địa chỉ: 111 - Quận 9 - TPHCM</span> <br />
+                <span><img src="/images/6.png" /> Diện thoại: 0909 112 113 - 0909 009 009</span> <br />
+                <span><img src="/images/11.png" /> Mail: hkshop123@gmail.com</span>
+            </div>
+            <div class="center">
+                <p style="margin-top:24px; margin-bottom: 10px; font-weight:bold;padding-left: 25px;">THÔNG TIN VÀ HƯỚNG DẪN</p> <br />
+                <a id="noidung" href="#"><span>></span> Giới thiệu</a> <br />
+                <a id="noidung" href="#"><span>></span> Hướng dẫn mua hàng</a> <br />
+                <a id="noidung" href="#"><span>></span> Các hình thức thanh toán</a> <br />
+                <a id="noidung" href="#"><span>></span> Điều khoản sử dụng</a> <br />
+                <a id="noidung" href="#"><span>></span> Bảo hành, đổi trả hàng</a> <br />
+                <a id="noidung" href="#"><span>></span> Chính sách bảo mật</a> <br />
+            </div>
+            <div class="right">
+                <p style="margin-top:24px; margin-bottom: 10px; font-weight:bold;padding-left: 25px;">KẾT NỐI VỚI CHÚNG TÔI</p> <br />
+                <a href="#" id="icon"><img src="/images/12.png" /></a>
+                <a href="#" id="icon"><img src="/images/13.png" /></a>
+                <a href="#" id="icon"><img src="/images/14.png" /></a>
+                <a href="#" id="icon"><img src="/images/15.png" /></a>
+                <a href="#" id="icon"><img src="/images/16.png" /></a>
+                <br />
+                <p style="margin-top:24px; margin-bottom:-5px; font-weight:bold;padding-left: 25px;">THANH TOÁN ONLINE</p>
+                <a id="icon2"><img src="/images/17.png" /></a>
+                <a id="icon2"><img src="/images/18.png" /></a>
+                <a id="icon2"><img src="/images/19.png" /></a>
+                <a id="icon2"><img src="/images/20.png" /></a>
+
+            </div>
+        </div> <!-- Hết footer -->
+
+    </div> <!-- Hết container -->
+</body>
+</html>

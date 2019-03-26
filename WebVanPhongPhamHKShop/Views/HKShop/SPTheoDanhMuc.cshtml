@@ -1,0 +1,25 @@
+﻿@model IEnumerable<WebVanPhongPhamHKShop.Models.MatHang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+@foreach (var MatHang in Model)
+{
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail" style="width:200px; height:200px">
+            <a href="@Url.Action("Detail","HKShop",new { id = MatHang.MaMH })">
+                <img src="~/images/@MatHang.AnhBia" alt="@MatHang.TenMH" style="width:58%" />
+                <div>
+                    <br />
+                    <h4 style="text-align:center">
+                        @MatHang.TenMH
+                    </h4>
+                    <p></p>
+                </div>
+            </a>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,202 @@
+﻿body
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: tahoma;
+	font-size: 16px;
+}
+
+/* HEADER.css*/
+.header
+{
+	height: 200px;
+    width: 1400px;
+    margin: -30px auto;
+}
+/* Header top*/
+#btn_logo {
+    height: 88px;
+    width: 245px;
+    margin: 0px 200px 0px 0px;
+    text-decoration:none;
+    font-size: 30px;
+    color: orange;
+    float: left;
+}
+.header .header_top_right ul
+{
+    list-style-type: none;
+}
+.header .header_top_right ul a
+{
+    margin-left: 30px;
+    margin-top: 60px;
+    text-decoration: none;
+    color: darkgrey;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+
+    float:left;
+}
+/* hết header_top */
+
+/*Header bottom*/
+.header .header_bottom .menu ul
+{
+    background-color: aquamarine;
+    width: 245px;
+    padding: 0;
+    list-style-type: none;
+}
+.header .header_bottom .menu ul li
+{
+    width: auto;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid yellow;
+    padding: 0 2em;
+    position: relative;
+}
+.header .header_bottom .menu ul li a
+{
+    text-decoration: none;
+    color:darkgray;
+    font-weight:bold;
+    display: block;
+}
+.header .header_bottom .menu ul li:hover
+{
+    background-color: cornflowerblue;
+}
+.header .header_bottom .submenu {
+   
+    position: absolute;
+    left: 250px;
+    left: 0;
+    display: none;
+    
+}
+.header .header_bottom .submenu a
+{
+    background-color: aliceblue;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 1em;
+    border-bottom: 1px solid yellow;
+    font-size: 15px;
+}
+.header .header_bottom .submenu a:hover
+{
+    background-color: cornsilk;
+}
+.header .header_bottom .menu ul li:hover .submenu
+{
+    display: block;
+}
+
+.header .header_bottom .right 
+{
+    width: 1145px;
+    height: 60px;
+    margin-top: -77px;
+    padding: 0;
+    float: right;
+    background-color: gainsboro;
+    border-bottom: 1px solid yellow;
+}
+.header .header_bottom .right #btn_Dangnhap
+{
+   color: white;
+}
+.header .header_bottom .right #btn_kiemtra
+{
+   color: white;
+}
+.header .header_bottom .right #btn_giohang
+{
+   color: white;
+}
+.header .header_bottom .right #btn_Dangnhap:hover
+{
+   color: darkorange;
+}
+.header .header_bottom .right #btn_DangKy:hover
+{
+   color: darkorange;
+}
+.header .header_bottom .right #btn_kiemtra:hover
+{
+   color: darkorange;
+}
+.header .header_bottom .right #btn_giohang:hover
+{
+   color: darkorange;
+}
+/* Hết header_bottom*/
+
+/* CONTENT.css*/
+.content
+{
+    width: 1000px;
+    float:left;
+    margin: 75px auto 5px;
+    background-color: azure;
+}
+
+/*FOOTER.css*/
+.footer {
+    width: 100%;
+    height: 300px;
+    float: left;
+    background-color: darkslategrey;
+}
+.footer .left
+{
+    width: 500px;
+    height: 250px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+.footer .left span
+{
+    padding-left:25px;
+    line-height: 30px;
+    color: white;
+}
+.footer .center
+{
+    width: 400px;
+    height: 250px;
+    float: left;
+    margin-top: 20px;
+}
+.footer .center #noidung
+{
+    padding-left:25px;
+    line-height: 30px;
+    text-decoration:none;
+    color: white;
+}
+.footer .center #noidung:hover
+{
+    color: darkorange;
+}
+.footer .right
+{
+    width: 500px;
+    height: 250px;
+    float: left;
+    margin-top: 20px;
+}
+.footer .right #icon
+{
+    margin-left: 25px;
+}
+.footer .right #icon2
+{
+    margin-left: 25px;
+    line-height: 100px;
+}
+/* Hết Footer*/

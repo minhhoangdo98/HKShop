@@ -1,0 +1,5 @@
+﻿@model IEnumerable<WebVanPhongPhamHKShop.Models.DanhMuc>
+@foreach (var item in Model)
+{
+    <a href="@Url.Action("SPTheoDanhMuc","HKSHop",new { id=item.MaDM})">@item.TenDM</a>
+}

@@ -1,0 +1,39 @@
+﻿@using WebVanPhongPhamHKShop.Models
+@using PagedList.Mvc
+@model PagedList.PagedList<MatHang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Sản phẩm mới</h2>
+@foreach (var MatHang in Model)
+{
+    @*chay vong foreach hie thi cac mat hang*@
+    <div  class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail" style="width:200px; height:200px" >
+            <a href="@Url.Action("Detail","HKShop",new { id = MatHang.MaMH })">
+                <img src="~/images/@MatHang.AnhBia" alt="@MatHang.TenMH" style="width:58%"/>
+                <div>
+                    <br />
+                    <h4 style="text-align:center">
+                        @MatHang.TenMH
+                    </h4>
+                    <p></p>
+                </div>
+            </a>
+        </div>
+    </div>
+}
+@* Tao lien ket trang *@
+    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+<div class="MenuTrang">
+    @Html.PagedListPager(Model,page=>Url.Action("Index",new { page=page}))
+</div>
+<style>
+    .MenuTrang li{
+        display:inline;
+    }
+</style>
+
