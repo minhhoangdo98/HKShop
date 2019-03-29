@@ -95,14 +95,13 @@
     display: block;
 }
 
-.header .header_bottom .right 
-{
+.header .header_bottom .right {
     width: 1145px;
     height: 60px;
     margin-top: -77px;
     padding: 0;
     float: right;
-    background-color: gainsboro;
+    background-color: aquamarine;
     border-bottom: 1px solid yellow;
 }
 .header .header_bottom .right #btn_Dangnhap
