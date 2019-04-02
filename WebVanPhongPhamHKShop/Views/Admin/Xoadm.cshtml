@@ -1,0 +1,32 @@
+﻿@model WebVanPhongPhamHKShop.Models.DanhMuc
+
+@{
+    ViewBag.Title = "Xoadm";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Xác nhận thông tin cần xóa</h2>
+
+<h3>Bạn muốn xóa danh mục này?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên danh mục:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDM)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Trở", "Danhmuc")
+        </div>
+    }
+</div>

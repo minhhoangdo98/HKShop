@@ -100,6 +100,7 @@ namespace WebVanPhongPhamHKShop.Controllers
                 if (kh != null)
                 {
                     Session["Taikhoan"] = kh;
+                    Session["hoten"] = kh.HoTen;
                     return RedirectToAction("Index", "HKShop");
                 }
                 else
