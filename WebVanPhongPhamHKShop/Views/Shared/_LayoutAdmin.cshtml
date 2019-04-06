@@ -6,52 +6,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="/Content/Style.css">
+
+    <link href="~/Content/admin.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container" style="font-family:Tahoma">
         <div class="header">
-            <div class="header_top">
-                <!-- Phần trên của header-->
-                <div class="header_top_left">
-                    <!-- Logo -->
-                    <a href="@Url.Action("Index","HKShop")" id="btn_logo" style="margin-left: 1px; margin-top: 35px;"><img src="/images/logo.png" width="150px" height="80px" sizes="50" /> Shop </span></a> <br />
-
+            <div class="headertop">
+                <div class="logo">
+                    <a href="@Url.Action("Index","HKShop")" style="font-weight: bold; font-size: 18px; text-decoration: none;"><img src="~/images/logo.png" alt="" width="140px" height="100px"><span>SHOP</span></a>
                 </div>
-                <div class="header_top_right">
-                    <p style="font-size: 15px; text-align:right; padding-top:30px; color:darkorange; background-color:brown;">Giờ làm việc (8:00 - 22:00)</p>
-                    <p style="font-size: 15px; text-align:right; margin-top: 5px; color: darkorange"><img src="/images/6.png" /> 0909 112 113</p>
+                <div class="lienhe">
+                    <span style="font-size: 16px; line-height: 30px; color: blue; width: 230px; display:block; float:left">Giờ làm việc (8:00 - 22:00) </span>
+                    <span style="font-size: 16px; line-height: 30px; color: blue;"><img src="~/images/6.png" />0909 112 113</span>
+                </div>
+                <div class="thongtin">
+                    <a href="@Url.Action("Index","HKShop")"> Trang chủ</a>
+                    <a href="@Url.Action("Index","GioiThieu")"> Giới thiệu</a>
+                    <a href="#"> Đơn hàng</a>
+                    <a href="#"> Bảo hành</a>
+                    <a href="#"> Tin tức</a>
+                    <a href="#"> Khuyến mãi</a>
+                    <a href="@Url.Action("Index","Contact")"> Liên hệ</a>
+                </div>
+
+                <div class="right">
+                    @Html.Action("GioHangPartial", "GioHang")
+                    @Html.Partial("LoginPartial")
                 </div>
             </div> <!-- Hết header_top-->
-            <div class="header_bottom">
-                <!-- Phần dưới của header-->
-                <div class="menu">
-                    <!-- Menu -->
-                    <ul>
-                        <li>
-                            <a href="#"><img src="/images/7.png" /> Menu</a>
+        </div>
+        <div class="content" style="width:auto; height: 1295px">
+            <div class="menu">
+                <!-- Menu -->
+                <ul>
+                    <li>
+                        <a href="#" style="font-size: 20px"><img src="~/images/7.png" /> <strong>Menu</strong></a>
 
-                            <ul class="submenu">
-                                    @Html.ActionLink("Trang chủ", "Index", "Admin")
-                                    @Html.ActionLink("Quán lý mặt hàng", "Sanpham", "Admin")
-                                    @Html.ActionLink("Quán lý danh mục", "Danhmuc", "Admin")
-                            </ul>
-                        </li>
+                        <ul class="submenu" style="width: 437px">
+                            @Html.ActionLink("Trang chủ", "Index", "Admin")
+                            @Html.ActionLink("Quán lý mặt hàng", "Sanpham", "Admin")
+                            @Html.ActionLink("Quán lý danh mục", "Danhmuc", "Admin")
+                        </ul>
+                    </li>
 
-                    </ul>
-                </div> <!-- hết menu-->
-            </div> <!-- Hết header_bottom-->
-        </div> <!-- Hết header -->
-
-        <div style="width:1400px; height:90px; background-color:brown;"></div>
-        <div class="content" style="width:auto">
+                </ul>
+            </div> <!-- hết menu-->
             <div>@RenderBody()</div>
         </div>
 
         <div class="footer" style="background-color:brown">
             <div class="left">
-                <a href="#" id="btn_logo" style="margin-left: 15px; margin-top: 15px; margin-bottom: 20px"><img src="/images/logo.png" width="150px" height="65px" sizes="50" /> Shop</a> <br />
+                <a href="#" id="btn_logo" style="margin-left: 15px; margin-top: 15px; margin-bottom: 20px"><img src="/images/logo.png" width="150px" height="65px" sizes="50" /></a> <br />
                 <span><img src="/images/5.png" /> Địa chỉ: 111 - Quận 9 - TPHCM</span> <br />
                 <span><img src="/images/6.png" /> Diện thoại: 0909 112 113 - 0909 009 009</span> <br />
                 <span><img src="/images/11.png" /> Mail: hkshop123@gmail.com</span>

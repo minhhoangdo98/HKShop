@@ -1,0 +1,92 @@
+﻿<meta http-equiv="x-ua-compatible" content="IE=edge">
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutThongTin.cshtml";
+}
+<style>
+    .content {
+        height: 680px;
+        
+    }
+
+    #mapCanvas {
+        height: 460px;
+        width: 500px;
+    }
+</style>
+
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <h3>Thông tin liên hệ</h3>
+                <p style="color: darkorange; font-size: 26px; font-weight:bold">HK Shop</p>
+                <p>Địa chỉ: 111 - Quận 9 - TPHCM</p>
+                <p>Diện thoại: 0909 112 113 - 0909 009 009</p>
+                <p>Mail: <a href="#">hkshop123@gmail.com</a></p>
+                <h3>Gửi thông tin</h3>
+                <form>
+                    <div class="form-group">
+                        <label>Họ và tên</label>
+                        <input type="text" id="txtName" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Điện thoại</label>
+                        <input type="text" id="txtPhone" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Địa chỉ</label>
+                        <input type="text" id="txtAddress" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" id="txtEmail" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Yêu cầu</label>
+                        <textarea id="txtContent" class="form-control">
+
+                        </textarea>
+                    </div>
+                    <button id="btnSend" class="btn btn-success">Gửi</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3>Bản Đồ</h3>
+                <div id="mapCanvas"></div>
+                <script>
+
+                    // This example displays a marker at the center of Australia. 
+                    // When the user clicks the marker, an info window opens.
+
+                    function initMap() {
+                        var uluru = { lat: 10.855586, lng: 106.785713 };
+                        var map = new google.maps.Map(document.getElementById('mapCanvas'), {
+                            zoom: 16,
+                            center: uluru
+                        });
+
+                        var contentString = '@Model.content';
+
+                        var infowindow = new google.maps.InfoWindow({
+                            content: contentString
+                        });
+
+                        var marker = new google.maps.Marker({
+                            position: uluru,
+                            map: map,
+                            title: 'Địa chỉ'
+                        });
+                        marker.addListener('click', function () {
+                            infowindow.open(map, marker);
+                        });
+                    }
+                </script>
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIX8qwRL_L_mh8vj_AL6Y_RwfYyPxGA_w&callback=initMap">
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+

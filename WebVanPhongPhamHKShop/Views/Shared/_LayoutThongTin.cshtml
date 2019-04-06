@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>HK Shop</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Thongtin.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="headertop">
+                <div class="logo">
+                    <a href="@Url.Action("Index","HKShop")" style="font-weight: bold; font-size: 18px; text-decoration: none;">
+                        <img src="~/images/logo.png" alt="" width="140px" height="100px"/><span>SHOP</span>
+                    </a>
+                </div>
+                <div class="lienhe">
+                    <span style="font-size: 16px; line-height: 30px; color: blue; width: 230px; display:block; float:left">Giờ làm việc (8:00 - 22:00) </span>
+                    <span style="font-size: 16px; line-height: 30px; color: blue;"><img src="~/images/6.png" />0909 112 113</span>
+                </div>
+                <div class="thongtin">
+                    <a href="@Url.Action("Index","HKShop")"> Trang chủ</a>
+                    <a href="@Url.Action("Index","GioiThieu")"> Giới thiệu</a>
+                    <a href="#"> Đơn hàng</a>
+                    <a href="#"> Bảo hành</a>
+                    <a href="#"> Tin tức</a>
+                    <a href="#"> Khuyến mãi</a>
+                    <a href="@Url.Action("Index","Contact")"> Liên hệ</a>
+                </div>
+
+                <div class="right">
+                    @Html.Action("GioHangPartial", "GioHang")
+                    @Html.Partial("LoginPartial")
+                </div>
+            </div> <!-- Hết header_top-->
+        </div>
+        <div class="content">              
+               @RenderBody()
+        </div>
+        <div class="footer">
+            <div class="left">
+                <a href="#" id="btn_logo" style="margin-left: 15px; margin-top: 15px;"><img src="/images/logo.png" width="150px" height="75px" sizes="50" /></a> <br />
+                <span><img src="/images/5.png" /> Địa chỉ: 111 - Quận 9 - TPHCM</span> <br />
+                <span><img src="/images/6.png" /> Diện thoại: 0909 112 113 - 0909 009 009</span> <br />
+                <span><img src="/images/11.png" /> Mail: hkshop123@gmail.com</span>
+            </div>
+            <div class="center">
+                <p style="margin-top:24px; margin-bottom: 10px; font-weight:bold;padding-left: 25px;">THÔNG TIN VÀ HƯỚNG DẪN</p> <br />
+                <a id="noidung" href="#"><span>></span> Giới thiệu</a> <br />
+                <a id="noidung" href="#"><span>></span> Hướng dẫn mua hàng</a> <br />
+                <a id="noidung" href="#"><span>></span> Các hình thức thanh toán</a> <br />
+                <a id="noidung" href="#"><span>></span> Điều khoản sử dụng</a> <br />
+                <a id="noidung" href="#"><span>></span> Bảo hành, đổi trả hàng</a> <br />
+                <a id="noidung" href="#"><span>></span> Chính sách bảo mật</a> <br />
+            </div>
+            <div class="right">
+                <p style="margin-top:24px; margin-bottom: 10px; font-weight:bold;padding-left: 25px;">KẾT NỐI VỚI CHÚNG TÔI</p> <br />
+                <a href="#" id="icon"><img src="/images/12.png" /></a>
+                <a href="#" id="icon"><img src="/images/13.png" /></a>
+                <a href="#" id="icon"><img src="/images/14.png" /></a>
+                <a href="#" id="icon"><img src="/images/15.png" /></a>
+                <a href="#" id="icon"><img src="/images/16.png" /></a>
+                <br />
+                <p style="margin-top:24px; margin-bottom:-5px; font-weight:bold;padding-left: 25px;">THANH TOÁN ONLINE</p>
+                <a id="icon2"><img src="/images/17.png" /></a>
+                <a id="icon2"><img src="/images/18.png" /></a>
+                <a id="icon2"><img src="/images/19.png" /></a>
+                <a id="icon2"><img src="/images/20.png" /></a>
+
+            </div>
+        </div> <!-- Hết footer -->
+
+    </div> <!-- Hết container -->
+</body>
+</html>

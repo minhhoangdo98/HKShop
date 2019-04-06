@@ -18,6 +18,7 @@ namespace WebVanPhongPhamHKShop
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "HKShop", action = "Index", id = UrlParameter.Optional }
             );
+            
         }
     }
 }

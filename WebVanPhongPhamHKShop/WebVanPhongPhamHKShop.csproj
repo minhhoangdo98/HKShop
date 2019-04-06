@@ -136,10 +136,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
+    <Compile Include="Controllers\GioiThieuController.cs" />
     <Compile Include="Controllers\HKShopController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NguoiDungController.cs" />
+    <Compile Include="DAO\ContactDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -152,6 +155,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\admin.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -159,6 +163,7 @@
     <Content Include="Content\main.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Style.css" />
+    <Content Include="Content\Thongtin.css" />
     <Content Include="Content\util.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.css" />
@@ -194,6 +199,14 @@
     <Content Include="images\7.png" />
     <Content Include="images\8.png" />
     <Content Include="images\9.png" />
+    <Content Include="images\a1.jpg" />
+    <Content Include="images\a2.jpg" />
+    <Content Include="images\a3.jpg" />
+    <Content Include="images\a4.jpg" />
+    <Content Include="images\a5.gif" />
+    <Content Include="images\a6.jpg" />
+    <Content Include="images\a7.jpg" />
+    <Content Include="images\bb.jpg" />
     <Content Include="images\ButChi2BThienLong.jpg" />
     <Content Include="images\ButChuA.jpg" />
     <Content Include="images\ButLongBangHouseHop12Cay.jpg" />
@@ -217,17 +230,15 @@
     <Content Include="images\GiayIn\Giấy-Than-G-Star.jpg" />
     <Content Include="images\Keo-S008.jpg" />
     <Content Include="images\logo.png" />
+    <Content Include="images\nen.jpg" />
+    <Content Include="images\nen2.jpg" />
+    <Content Include="images\nenlogo.jpg" />
     <Content Include="images\RuotChi.jpg" />
     <Content Include="images\SachVo\Sổ-caro.jpg" />
     <Content Include="images\SachVo\Sổ-lò-xo-A7.jpg" />
     <Content Include="images\SachVo\Tập-100T-ABC.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Models\dbQLVanPhongPham.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>dbQLVanPhongPham.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
@@ -295,10 +306,16 @@
     <Content Include="fonts\ubuntu\Ubuntu-Medium.ttf" />
     <Content Include="fonts\ubuntu\Ubuntu-MediumItalic.ttf" />
     <Content Include="fonts\ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="Models\dbQLVanPhongPham.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbQLVanPhongPham.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Models\dbQLVanPhongPham.dbml.layout">
       <DependentUpon>dbQLVanPhongPham.dbml</DependentUpon>
     </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\Contact.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -348,6 +365,9 @@
     <Content Include="Views\Admin\Suasp.cshtml" />
     <Content Include="Views\Admin\Suadm.cshtml" />
     <Content Include="Views\Shared\LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_LayoutThongTin.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\GioiThieu\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

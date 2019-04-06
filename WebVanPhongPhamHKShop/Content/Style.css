@@ -5,143 +5,167 @@
 	font-family: tahoma;
 	font-size: 16px;
 }
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+/* HEADER*/
+.header {
+    height: 140px;
+    background-image:url(/images/a3.jpg);
+}
 
-/* HEADER.css*/
-.header
+.header .headertop .logo
 {
-	height: 200px;
-    width: 1400px;
-    margin: -30px auto;
+	width: 150px; height: 100px;
+	margin-right:100px;
+	float: left;
 }
-/* Header top*/
-#btn_logo {
-    height: 88px;
-    width: 245px;
-    margin: 0px 200px 0px 0px;
-    text-decoration:none;
-    font-size: 30px;
-    color: orange;
-    float: left;
-}
-.header .header_top_right ul
+.header .headertop .logo span
 {
-    list-style-type: none;
+	color: red;
+	font-size: 25px;
+	margin-left: 37px;
 }
-.header .header_top_right ul a
+.header .headertop .thongtin
 {
-    margin-left: 30px;
-    margin-top: 60px;
-    text-decoration: none;
-    color: darkgrey;
-    font-size: 15px;
-    line-height: 20px;
-    text-align: center;
+	margin-top: 70px;
+	float: left;
+    margin-left: 15px;
+}
+.header .headertop .thongtin a
+{
+	text-decoration: none;
+	width: 124px; height: 40px;
+	display: block; float: left;
+	font-weight: bold; text-align: center; color: red; background-color: #e9e1cf;
+	padding-top: 9px;
+	margin-left: 1px;
+}
+.header .headertop .thongtin a:hover
+{
+	background-color:#FF0000;
+	color:#FFFFFF;
+}
+.header .headertop .lienhe
+{
+	float: right;
+}
 
-    float:left;
-}
-/* hết header_top */
-
-/*Header bottom*/
-.header .header_bottom .menu ul
+.header .headertop .right 
 {
-    background-color: aquamarine;
-    width: 245px;
-    padding: 0;
-    list-style-type: none;
-}
-.header .header_bottom .menu ul li
-{
-    width: auto;
     height: 60px;
-    line-height: 60px;
-    border-bottom: 1px solid yellow;
-    padding: 0 2em;
-    position: relative;
-}
-.header .header_bottom .menu ul li a
-{
-    text-decoration: none;
-    color:darkgray;
-    font-weight:bold;
-    display: block;
-}
-.header .header_bottom .menu ul li:hover
-{
-    background-color: cornflowerblue;
-}
-.header .header_bottom .submenu {
-   
-    position: absolute;
-    left: 250px;
-    left: 0;
-    display: none;
-    
-}
-.header .header_bottom .submenu a
-{
-    background-color: aliceblue;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 1em;
-    border-bottom: 1px solid yellow;
-    font-size: 15px;
-}
-.header .header_bottom .submenu a:hover
-{
-    background-color: cornsilk;
-}
-.header .header_bottom .menu ul li:hover .submenu
-{
-    display: block;
-}
-
-.header .header_bottom .right {
-    width: 1145px;
-    height: 60px;
-    margin-top: -77px;
+    margin-top: -80px;
     padding: 0;
     float: right;
-    background-color: aquamarine;
-    border-bottom: 1px solid yellow;
+    color: red;
 }
-.header .header_bottom .right #btn_Dangnhap
+.header .headertop .right #btn_Dangnhap
 {
-   color: white;
+   color: red;
 }
-.header .header_bottom .right #btn_kiemtra
+.header .headertop .right #btn_kiemtra
 {
-   color: white;
+   color:red;
 }
-.header .header_bottom .right #btn_giohang
+.header .headertop .right #btn_giohang
 {
-   color: white;
+   color: red;
 }
-.header .header_bottom .right #btn_Dangnhap:hover
-{
-   color: darkorange;
-}
-.header .header_bottom .right #btn_DangKy:hover
+.header .headertop .right #btn_Dangnhap:hover
 {
    color: darkorange;
 }
-.header .header_bottom .right #btn_kiemtra:hover
+.header .headertop .right #btn_DangKy:hover
 {
    color: darkorange;
 }
-.header .header_bottom .right #btn_giohang:hover
+.header .headertop .right #btn_kiemtra:hover
 {
    color: darkorange;
+}
+.header .headertop .right #btn_giohang:hover
+{
+   color: darkorange;
+}
+/*Het Header */
+
+/*Content*/
+.content {
+    height: 1500px;
+    margin-top: 5px;
+   background-color: pink;
+}
+.content .left
+{
+	width: 250px;
+	height: 300px;
+	float:left;	
+   
+}
+.content .left .danhmuc h3
+{
+	margin:0;
+	height:52px;
+	padding-top:15px;
+	background-position:left top;
+	padding-left:40px;
+	font-size:20px;
+	color:white;
+	background-color: #e9e1cf;
+    font-weight:bold;
+    border-bottom: 3px solid;
+}
+.content .left .danhmuc a
+{
+	display:block;
+	line-height: 50px;
+	padding-left:60px;
+	border-bottom: 1px solid;
+	text-decoration:none;
+	font-weight:bold;
+	color:#000;
+    font-size:16px;
+    background-color:darkseagreen;
+}
+.content .left .danhmuc a:hover
+{
+    color: white;
+    background-color: red;
+}
+
+.content .right
+{
+    width: 874px;
+    height: 1500px;
+    float: left;
+    border: 1px solid blue;
+    margin-left: 16px;
+}
+.content .right .slider
+{
+    width: 820px;
+    height:350px;
+    margin-left: 35px;
+    float:left;  
+}
+
+.content .right .body
+{
+    width: 820px;
+    background-color: darksalmon;
+    float: left;
+    margin-left: 35px;   
+    margin-top: 40px;
+}
+.content .right .body img
+{
+    height: 175px;
 }
 /* Hết header_bottom*/
 
 /* CONTENT.css*/
-.content
-{
-    width: 1000px;
-    float:left;
-    margin: 75px auto 5px;
-    background-color: azure;
-}
+
 
 /*FOOTER.css*/
 .footer {
@@ -149,14 +173,15 @@
     height: 300px;
     float: left;
     background-color: darkslategrey;
+    margin-top: 2px;
 }
 .footer .left
 {
-    width: 500px;
+    width: 400px;
     height: 250px;
     float: left;
-    margin-top: 20px;
-    margin-left: 90px;
+    margin-top: 40px;
+    margin-left: 20px;
 }
 .footer .left span
 {
@@ -166,7 +191,7 @@
 }
 .footer .center
 {
-    width: 400px;
+    width: 300px;
     height: 250px;
     float: left;
     margin-top: 20px;
@@ -184,7 +209,7 @@
 }
 .footer .right
 {
-    width: 500px;
+    width: 400px;
     height: 250px;
     float: left;
     margin-top: 20px;

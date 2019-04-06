@@ -8,67 +8,88 @@
 
     <link rel="stylesheet" type="text/css" href="/Content/Style.css">
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    
 </head>
 <body>
-    <div class="container" style="font-family:Tahoma;">
+    <div class="container">
         <div class="header">
-            <div class="header_top">
-                <!-- Phần trên của header-->
-                <div class="header_top_left">
-                    <!-- Logo -->
-                    <a href="@Url.Action("Index","HKShop")" id="btn_logo" style="margin-left: 1px; margin-top: 35px;"><img src="/images/logo.png" width="150px" height="80px" sizes="50" /> Shop </span></a> <br />
-
+            <div class="headertop">
+                <div class="logo">
+                    <a href="@Url.Action("Index","HKShop")" style="font-weight: bold; font-size: 18px; text-decoration: none;"><img src="~/images/logo.png" alt="" width="140px" height="100px"><span>SHOP</span></a>
                 </div>
-                <div class="header_top_right">
-                    <ul>
-                        <li><a href="#" id="1"><img src="/images/1.png" /> Tra cứu đơn hàng</a></li>
-                        <li><a href="#" id="2"><img src="/images/2.png" /> Câu hỏi thường gặp</a></li>
-                        <li><a href="#" id="3"><img src="/images/3.png" /> Tin tức</a></li>
-                        <li><a href="#" id="4"><img src="/images/4.png" /> Khuyến mãi</a></li>
-                        <li><a href="#" id="5"><img src="/images/5.png" /> Liên hệ</a></li>
-                    </ul>
-                    <p style="font-size: 15px; text-align:right; padding-top:30px; color:darkorange; background-color:darkslategrey;">Giờ làm việc (8:00 - 22:00)</p>
-                    <p style="font-size: 15px; text-align:right; margin-top: 5px; color: darkorange"><img src="/images/6.png" /> 0909 112 113</p>
+                <div class="lienhe">
+                    <span style="font-size: 16px; line-height: 30px; color: blue; width: 230px; display:block; float:left">Giờ làm việc (8:00 - 22:00) </span>
+                    <span style="font-size: 16px; line-height: 30px; color: blue;"><img src="~/images/6.png" />0909 112 113</span>
                 </div>
-            </div> <!-- Hết header_top-->
-            <div class="header_bottom">
-                <!-- Phần dưới của header-->
-                <div class="menu">
-                    <!-- Menu -->
-                    <ul>
-                        <li>
-                            <a href="#"><img src="/images/7.png" /> DANH MỤC</a>
-                           
-                            <ul class="submenu">
-                                @Html.Action("DanhMuc", "HKShop")
-                            </ul>
-                        </li>
-
-                    </ul>
-                </div> <!-- hết menu-->
+                <div class="thongtin">
+                    <a href="@Url.Action("Index","HKShop")"> Trang chủ</a>
+                    <a href="@Url.Action("Index","GioiThieu")"> Giới thiệu</a>
+                    <a href="@Url.Action("Giohang","Giohang")"> Đơn hàng</a>
+                    <a href="#"> Bảo hành</a>
+                    <a href="#"> Tin tức</a>
+                    <a href="#"> Khuyến mãi</a>
+                    <a href="@Url.Action("Index","Contact")"> Liên hệ</a>
+                </div>
+                
                 <div class="right">
-                    <input type="text" id="search" placeholder="Tìm kiếm" style="height: 40px; width: 400px; margin-top: 7px; margin-left: 15px; padding-left: 15px; float:left" />
-                    <select style="height: 46px; width: 80px; margin-top: 7px; margin-left: -7px; border-left: 2px solid; float:left">
-                        <option value="Sach">Sách</option>
-                        <option value="bút">Bút bi</option>
-                        <option value="gom">Gom</option>
-                        <option value="thuoc">Thước</option>
-                    </select>
-                    <button style="height: 46px; width: 60px; margin-top: 7px; background-color:darkorange; cursor:pointer; border-radius:5px; float: left"><img src="/images/8.png" /></button>
                     @Html.Action("GioHangPartial", "GioHang")
                     @Html.Partial("LoginPartial")
                 </div>
-            </div> <!-- Hết header_bottom-->
-        </div> <!-- Hết header -->
-        
-        <div style="width:1400px; height:90px; background-color:darkslategrey;"></div>
+            </div> <!-- Hết header_top-->
+        </div>
         <div class="content">
-            <div>@RenderBody()</div>
-        </div> 
+            <div class="left">
+                <div class="danhmuc" style="width: 265px">
+                    <h3><img src="/images/7.png" /> DANH MỤC</h3>
+                    @Html.Action("DanhMuc", "HKShop")
+                </div>
+            </div>
+            <div class="right">
+                <div class="slider">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Nút bấm tròn đặt ở đây -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="~/images/a1.jpg" width="800px" >
+                                <!-- thêm caption cho ảnh ở đây -->
+                            </div>
+                            <div class="item">
+                                <img src="~/images/a2.jpg" width="800px" >
+                                <!-- thêm caption cho ảnh ở đây -->
+                            </div>
+                            <div class="item">
+                                <img src="~/images/a4.jpg" width="800px" >
+                                <!-- thêm caption cho ảnh ở đây -->
+                            </div>
+                            <div class="item">
+                                <img src="~/images/bb.jpg" width="800px" >
+                                <!-- thêm caption cho ảnh ở đây -->
+                            </div>
+                        </div>
+                        <!-- Nút next và prev đặt ở đây -->
+
+                    </div>
+                </div>
+
+                <div class="body">
+                    @RenderBody()
+                </div>
+            </div>
+            
+        </div>
+        
 
         <div class="footer">
             <div class="left">
-                <a href="#" id="btn_logo" style="margin-left: 15px; margin-top: 15px; margin-bottom: 20px"><img src="/images/logo.png" width="150px" height="65px" sizes="50" /> Shop</a> <br />
+                <a href="#" id="btn_logo" style="margin-left: 15px; margin-top: 15px;"><img src="/images/logo.png" width="150px" height="75px" sizes="50" /></a> <br />
                 <span><img src="/images/5.png" /> Địa chỉ: 111 - Quận 9 - TPHCM</span> <br />
                 <span><img src="/images/6.png" /> Diện thoại: 0909 112 113 - 0909 009 009</span> <br />
                 <span><img src="/images/11.png" /> Mail: hkshop123@gmail.com</span>
