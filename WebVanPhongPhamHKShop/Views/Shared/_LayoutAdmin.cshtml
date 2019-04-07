@@ -22,22 +22,19 @@
                     <span style="font-size: 16px; line-height: 30px; color: blue;"><img src="~/images/6.png" />0909 112 113</span>
                 </div>
                 <div class="thongtin">
-                    <a href="@Url.Action("Index","HKShop")"> Trang chủ</a>
-                    <a href="@Url.Action("Index","GioiThieu")"> Giới thiệu</a>
-                    <a href="#"> Đơn hàng</a>
-                    <a href="#"> Bảo hành</a>
-                    <a href="#"> Tin tức</a>
-                    <a href="#"> Khuyến mãi</a>
-                    <a href="@Url.Action("Index","Contact")"> Liên hệ</a>
+                    <a href="@Url.Action("Index","HKShop")"> Quay về user</a>
+                    <a href="#" style="background-color:darkgrey"> Giới thiệu</a>
+                    <a href="#" style="background-color:darkgrey"> Đơn hàng</a>
+                    <a href="#" style="background-color:darkgrey"> Bảo hành</a>
+                    <a href="#" style="background-color:darkgrey"> Tin tức</a>
+                    <a href="#" style="background-color:darkgrey"> Khuyến mãi</a>
+                    <a href="#" style="background-color:darkgrey"> Liên hệ</a>
                 </div>
 
-                <div class="right">
-                    @Html.Action("GioHangPartial", "GioHang")
-                    @Html.Partial("LoginPartial")
-                </div>
+                
             </div> <!-- Hết header_top-->
         </div>
-        <div class="content" style="width:auto; height: 1295px">
+        <div class="content" style="width:auto; height: 1295px; background-color: burlywood; background-image: none">
             <div class="menu">
                 <!-- Menu -->
                 <ul>
@@ -47,7 +44,7 @@
                         <ul class="submenu" style="width: 437px">
                             @Html.ActionLink("Trang chủ", "Index", "Admin")
                             @Html.ActionLink("Quán lý mặt hàng", "Sanpham", "Admin")
-                            @Html.ActionLink("Quán lý danh mục", "Danhmuc", "Admin")
+                            @Html.ActionLink("Quán lý danh mục", "Danhmuc", "Admin")                         
                         </ul>
                     </li>
 

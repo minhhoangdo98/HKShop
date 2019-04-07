@@ -13,16 +13,10 @@ namespace WebVanPhongPhamHKShop.DAO
         {
             data = new dbQLVanPhongPhamDataContext();
         }
+
         public Contact GetContact()
         {
-            return data.Contacts.Single(x => x.status == "trues");
-        }
-        
-        public int InsertFeedBack(Feedback fb)
-        {
-            
-            return fb.ID;
-
+            return data.Contacts.Single(x => x.status == "true");
         }
     }
 }

@@ -27,8 +27,8 @@
                 <div class="thongtin">
                     <a href="@Url.Action("Index","HKShop")"> Trang chủ</a>
                     <a href="@Url.Action("Index","GioiThieu")"> Giới thiệu</a>
-                    <a href="#"> Đơn hàng</a>
-                    <a href="#"> Bảo hành</a>
+                    <a href="@Url.Action("Giohang","Giohang")"> Đơn hàng</a>
+                    <a href="@Url.Action("BaoHanh", "HKShop")"> Bảo hành</a>
                     <a href="#"> Tin tức</a>
                     <a href="#"> Khuyến mãi</a>
                     <a href="@Url.Action("Index","Contact")"> Liên hệ</a>
@@ -52,11 +52,11 @@
             </div>
             <div class="center">
                 <p style="margin-top:24px; margin-bottom: 10px; font-weight:bold;padding-left: 25px;">THÔNG TIN VÀ HƯỚNG DẪN</p> <br />
-                <a id="noidung" href="#"><span>></span> Giới thiệu</a> <br />
+                <a id="noidung" href="@Url.Action("Index","GioiThieu")"><span>></span> Giới thiệu</a> <br />
                 <a id="noidung" href="#"><span>></span> Hướng dẫn mua hàng</a> <br />
                 <a id="noidung" href="#"><span>></span> Các hình thức thanh toán</a> <br />
                 <a id="noidung" href="#"><span>></span> Điều khoản sử dụng</a> <br />
-                <a id="noidung" href="#"><span>></span> Bảo hành, đổi trả hàng</a> <br />
+                <a id="noidung" href="@Url.Action("BaoHanh", "HKShop")"><span>></span> Bảo hành, đổi trả hàng</a> <br />
                 <a id="noidung" href="#"><span>></span> Chính sách bảo mật</a> <br />
             </div>
             <div class="right">

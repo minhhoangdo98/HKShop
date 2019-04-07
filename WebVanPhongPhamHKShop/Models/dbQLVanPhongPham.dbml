@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLVanPhongPham" Class="dbQLVanPhongPhamDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-Q828VI2\SQLEXPRESS;Initial Catalog=QLVanPhongPham;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLVanPhongPhamConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=QLVanPhongPham;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLVanPhongPhamConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Admin" Member="Admins">
     <Type Name="Admin">
       <Column Name="UserAdmin" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -16,13 +16,6 @@
       <Association Name="NhaSanXuat_MatHang" Member="MatHangs" ThisKey="MaNSX" OtherKey="MaNSX" Type="MatHang" />
     </Type>
   </Table>
-  <Table Name="dbo.Contact" Member="Contacts">
-    <Type Name="Contact">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="content" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="status" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.ChiTietDonHang" Member="ChiTietDonHangs">
     <Type Name="ChiTietDonHang">
       <Column Name="MaDonHang" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -31,6 +24,13 @@
       <Column Name="DonGia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Association Name="DonDatHang_ChiTietDonHang" Member="DonDatHang" ThisKey="MaDonHang" OtherKey="MaDonHang" Type="DonDatHang" IsForeignKey="true" />
       <Association Name="MatHang_ChiTietDonHang" Member="MatHang" ThisKey="MaMH" OtherKey="MaMH" Type="MatHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contact" Member="Contacts">
+    <Type Name="Contact">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="content" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.DanhMuc" Member="DanhMucs">
@@ -50,6 +50,17 @@
       <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="DonDatHang_ChiTietDonHang" Member="ChiTietDonHangs" ThisKey="MaDonHang" OtherKey="MaDonHang" Type="ChiTietDonHang" />
       <Association Name="KhachHang_DonDatHang" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Feedback" Member="Feedbacks">
+    <Type Name="Feedback">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.KhachHang" Member="KhachHangs">
@@ -79,17 +90,6 @@
       <Association Name="MatHang_ChiTietDonHang" Member="ChiTietDonHangs" ThisKey="MaMH" OtherKey="MaMH" Type="ChiTietDonHang" />
       <Association Name="DanhMuc_MatHang" Member="DanhMuc" ThisKey="MaDM" OtherKey="MaDM" Type="DanhMuc" IsForeignKey="true" />
       <Association Name="NhaSanXuat_MatHang" Member="NhaSanXuat" ThisKey="MaNSX" OtherKey="MaNSX" Type="NhaSanXuat" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Feedback" Member="Feedbacks">
-    <Type Name="Feedback">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
-      <Column Name="Phone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="Content" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

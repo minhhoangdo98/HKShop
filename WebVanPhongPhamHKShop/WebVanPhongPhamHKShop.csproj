@@ -368,6 +368,7 @@
     <Content Include="Views\Shared\_LayoutThongTin.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\GioiThieu\Index.cshtml" />
+    <Content Include="Views\HKShop\BaoHanh.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

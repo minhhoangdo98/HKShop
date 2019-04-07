@@ -44,5 +44,10 @@ namespace WebVanPhongPhamHKShop.Controllers
             var mH = from s in data.MatHangs where s.MaMH == id select s;//Hien thi thong tin chi tiet san pham
             return View(mH.Single());
         }
+
+        public ActionResult BaoHanh()
+        {
+            return View();
+        }
     }
 }
